@@ -1,0 +1,74 @@
+<!-- html -->
+<section class="testimonial-slider">
+    <div class="page-width">
+        <div class="testimonial-track">
+            <div class="testimonial-card">
+                <div class="testimonial-meta">
+                    <img src="{{ 'avatar.png' | asset_url }}" alt="" class="avatar">
+                    <div class="author-meta">
+                        <h3 class="author-name">Victor Viana</h3>
+                        <div class="star-rating">
+                            <img src="{{ 'star.png' | asset_img_url: '15x' }}" alt="">
+                            <img src="{{ 'star.png' | asset_img_url: '15x' }}" alt="">
+                            <img src="{{ 'star.png' | asset_img_url: '15x' }}" alt="">
+                            <img src="{{ 'star.png' | asset_img_url: '15x' }}" alt="">
+                            <img src="{{ 'star.png' | asset_img_url: '15x' }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- schema -->
+{% schema %}
+{
+    "name": "Testimonial Slider",
+    "settings": [
+        {
+            "id": "testimonial-slider",
+            "type": "text",
+            "label": "Add a testimonial slider"
+        }
+    ],
+    "templates": ["index"],
+    "presets": [
+        {
+            "name": "Testimonial Slider",
+            "category": "Sliders"
+        }
+    ]
+}
+{% endschema %}
+<!-- stylesheet -->
+{% stylesheet %}
+    .testimonial-meta {
+        display: flex;
+        align-items: center;
+    }
+
+    img.avatar {
+        margin-right: 15px;
+        width: auto;
+        height: 70px;
+    }
+
+    h3.author-name {
+        font-weight: bold;
+        margin: 2px;
+    }
+
+    .testimonial-card {
+        border: 1px black solid;
+        padding: 15px;
+    }
+{% endstylesheet %}
+
+<!-- scripts -->
+{% javascript %}
+    
+{% endjavascript %}
